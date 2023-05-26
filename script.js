@@ -7,6 +7,15 @@ let rightNowDate = new Date();
 console.log(rightNowDate.getDay());
 // rightNowDate = rightNowDate.toDateString()
 document.getElementById('current').innerHTML = rightNowDate.getDay();
+// ---------------------------------------getNameofToday---------------------------------------------------------
+    document.getElementById('getNameofToday').onclick = function () {
+        let rightNow = new Date();
+        console.log(rightNow);
+        let theDay = rightNow.getDay();
+        console.log(theDay);
+        let nameofToday = daysName[theDay]
+        showOutput(nameofToday)
+    }
 // -----------------------------------------------------------------------------------
 
     let daysName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -18,7 +27,7 @@ document.getElementById('erase').onclick = function () {
 
 // -----------------------output--------------------
 document.getElementById('Clean').onclick = function () {
-    let outputBoxHtml =  document.getElementById('output').innerHTML ;
+    let outputBoxHtml =  document.getElementById('output').innerHTML = "" ;
  
     if (!outputBoxHtml.length) {
      Toastify({
@@ -42,4 +51,8 @@ document.getElementById('Clean').onclick = function () {
          }
        }).showToast();
     }
+ }
+//  -------------------------showOutput-----------------------------------
+ function showOutput(output) {
+    document.getElementById('output').innerHTML = output
  }
