@@ -52,6 +52,32 @@ document.getElementById('current').innerHTML = rightNowDate.getDay();
     showOutput(html)
 
     }
+// ------------------------------------whenIsyourNextBirthday------------------------
+    document.getElementById('whenIsyourNextBirthday').onclick = function () {
+        let dob = input();
+        if (!dob) {
+            Toastify({
+                text: "Enter your future birthday",
+                className: "info",
+                newWindow: true,
+                close: true,
+                style: {
+                  background: "linear-gradient(to right, #00000, #96c93d)",
+                }
+              }).showToast();  
+        }
+
+        let today = new Date();
+        let nextBirthdayDate = new Date (dob);
+
+        let msdiff = nextBirthdayDate.getTime() - today.getTime() ;
+
+        let daymsdiff = (msdiff/ (1000 * 60 * 60 *24));
+
+        console.log(daymsdiff);
+        let html = "Your next birthday is " + Math.floor(daymsdiff)  + "days away"
+        showOutput(html)
+    }
 // -----------------------------------------------------------------------------------
 
     let daysName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
