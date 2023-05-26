@@ -16,6 +16,42 @@ document.getElementById('current').innerHTML = rightNowDate.getDay();
         let nameofToday = daysName[theDay]
         showOutput(nameofToday)
     }
+// ---------------------------------calculateDaysPassedSinceIBorn---------------------------------
+    document.getElementById('calculateDaysPassedSinceIBorn').onclick = function () {
+    let dob =  input();
+    console.log(dob);
+    if (!dob.length) {
+        Toastify({
+            text: "Enter your Date of Birth",
+            className: "info",
+            newWindow: true,
+            close: true,
+            style: {
+              background:"linear-gradient(to right, #0009b, #96c93d) ",
+            }
+          }).showToast();
+    }
+
+    let today = new Date();
+    let bornDate = new Date(dob);
+    console.log(today);
+    console.log(bornDate);
+    
+
+    let todaytime = today.getTime();
+    let bornDateTime = bornDate.getTime();
+    console.log(todaytime);
+    console.log(bornDateTime);
+
+    let msdiff = todaytime - bornDateTime;
+    console.log(msdiff);
+    let daysdiff = (msdiff / (1000*60*60*24));
+    console.log(daysdiff);
+    let html = Math.floor(daysdiff) + " days have been passed since you born"
+    console.log(daysdiff);
+    showOutput(html)
+
+    }
 // -----------------------------------------------------------------------------------
 
     let daysName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -56,3 +92,8 @@ document.getElementById('Clean').onclick = function () {
  function showOutput(output) {
     document.getElementById('output').innerHTML = output
  }
+
+//  --------------------------showOutput--------------------------
+function input() {
+   return someText = document.getElementById('data').value ;
+}
