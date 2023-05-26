@@ -78,6 +78,14 @@ document.getElementById('current').innerHTML = rightNowDate.getDay();
         let html = "Your next birthday is " + Math.floor(daymsdiff)  + "days away"
         showOutput(html)
     }
+// ----------------------------greetUser------------------------
+function greetUser(username) {
+    showOutput("Good affter noon "+ username)
+}
+document.getElementById('greetUser').onclick = function () {
+    let username = prompt("Enter your name")
+    greetUser(username)
+}
 // -----------------------------------------------------------------------------------
 
     let daysName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
