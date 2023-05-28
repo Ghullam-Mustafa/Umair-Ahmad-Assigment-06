@@ -36,7 +36,7 @@ document.getElementById('current').innerHTML = rightNowDate.getDay();
     let bornDate = new Date(dob);
     console.log(today);
     console.log(bornDate);
-    
+    1
 
     let todaytime = today.getTime();
     let bornDateTime = bornDate.getTime();
@@ -130,4 +130,11 @@ document.getElementById('Clean').onclick = function () {
 //  --------------------------showOutput--------------------------
 function input() {
    return someText = document.getElementById('data').value ;
+}
+
+
+// ---------------------
+
+function jaclkel () {
+    
 }
