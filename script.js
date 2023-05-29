@@ -134,7 +134,3 @@ function input() {
 
 
 // ---------------------
-
-function jaclkel () {
-    
-}
