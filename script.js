@@ -131,6 +131,12 @@ document.getElementById('Clean').onclick = function () {
 function input() {
    return someText = document.getElementById('data').value ;
 }
-
-
+var date = new Date()
+date = date.getTime
+console.log(date);
+if (date ==  2 || 11) {
+    alert("good morning")
+}else if (date == 12 || 16) {
+    alert("good evening")
+}
 // ---------------------
