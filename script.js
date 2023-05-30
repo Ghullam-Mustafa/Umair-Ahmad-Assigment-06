@@ -131,12 +131,36 @@ document.getElementById('Clean').onclick = function () {
 function input() {
    return someText = document.getElementById('data').value ;
 }
-var date = new Date()
-date = date.getTime
+function lll() {
+    var Currenttime  = new Date()
+date = Currenttime.getHours()
 console.log(date);
-if (date ==  2 || 11) {
-    alert("good morning")
-}else if (date == 12 || 16) {
-    alert("good evening")
+if (date >= 0 && date <= 11) {
+    alert("good morning");
+}else if (date >= 11 && date <= 18 ) {
+    alert("good evening");
+}else  {
+    alert("good evening");
 }
-// ---------------------
+}
+let gggg = lll()
+console.log(gggg);
+
+// // ---------------------
+// function getTimeOfDay() {
+//     var currentTime = new Date();
+//     var hours = currentTime.getHours();
+  
+//     if (hours >= 1 && hours <= 11) {
+//       return "Good morning";
+//     } else if (hours >= 11 && hours <= 18) {
+//       return "Good afternoon";
+//     } else {
+//       return "Good night";
+//     }
+//   }
+  
+//   // Usage
+//   var greeting = getTimeOfDay();
+//   console.log(greeting);
+  
