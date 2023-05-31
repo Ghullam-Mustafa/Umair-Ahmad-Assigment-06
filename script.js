@@ -106,6 +106,10 @@ document.getElementById('greetUser').onclick = function () {
 function tellTime1() {
     tellTime()
 }
+// -----------------------tellTime2---------------------------------
+function tellTime2() {
+    tellTime()
+}
 // ---------------------Tell Time -----------------------------------------------
     function tellTime() {
         let now = new Date();
