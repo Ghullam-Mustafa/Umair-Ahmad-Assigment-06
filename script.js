@@ -80,11 +80,26 @@ document.getElementById('current').innerHTML = rightNowDate.getDay();
     }
 // ----------------------------greetUser------------------------
 function greetUser(username) {
-    showOutput("Good affter noon "+ username)
+    showOutput( username)
 }
 document.getElementById('greetUser').onclick = function () {
-    let username = prompt("Enter your name")
-    greetUser(username)
+    let username = prompt("Enter your name");
+    let now = new Date();
+    let hour = now.getHours();
+
+    let greetingMessage = "Good ";
+    if (hour >= 4 && hour < 12) {
+        greetingMessage += "Morning"
+    }else if (hour >= 12 && hour < 17) {
+        greetingMessage += "AfterNoon"
+    }else if (hour >= 17 && hour < 20) {
+        greetingMessage += "Evening"
+    }else{
+        greetingMessage += "Night"
+    }
+
+    let msg = greetingMessage + " " + username
+    greetUser(msg)
 }
 // -----------------------------------------------------------------------------------
 
@@ -128,23 +143,23 @@ document.getElementById('Clean').onclick = function () {
  }
 
 //  --------------------------showOutput--------------------------
-function input() {
-   return someText = document.getElementById('data').value ;
-}
-function lll() {
-    var Currenttime  = new Date()
-date = Currenttime.getHours()
-console.log(date);
-if (date >= 0 && date <= 11) {
-    alert("good morning");
-}else if (date >= 11 && date <= 18 ) {
-    alert("good evening");
-}else  {
-    alert("good evening");
-}
-}
-let gggg = lll()
-console.log(gggg);
+// function input() {
+//    return someText = document.getElementById('data').value ;
+// }
+// function lll() {
+//     var Currenttime  = new Date()
+// date = Currenttime.getHours()
+// console.log(date);
+// if (date >= 0 && date <= 11) {
+//     alert("good morning");
+// }else if (date >= 11 && date <= 18 ) {
+//     alert("good evening");
+// }else  {
+//     alert("good evening");
+// }
+// }
+// let gggg = lll()
+// console.log(gggg);
 
 // // ---------------------
 // function getTimeOfDay() {
