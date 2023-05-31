@@ -110,6 +110,10 @@ function tellTime1() {
 function tellTime2() {
     tellTime()
 }
+// -----------------------tellTime3---------------------------------
+function tellTime3() {
+    tellTime()
+}
 // ---------------------Tell Time -----------------------------------------------
     function tellTime() {
         let now = new Date();
