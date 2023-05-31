@@ -99,8 +99,21 @@ document.getElementById('greetUser').onclick = function () {
     }
 
     let msg = greetingMessage + " " + username
-    greetUser(msg)
+    greetUser(msg);
+    tellTime();
 }
+// -----------------------tellTime1---------------------------------
+function tellTime1() {
+    tellTime()
+}
+// ---------------------Tell Time -----------------------------------------------
+    function tellTime() {
+        let now = new Date();
+        let theHr = now.getHours();
+        let theMin = now.getMinutes();
+        let theSec = now.getSeconds();
+
+        output.innerHTML += "<br>You clicked the button @ " + theHr + ":" + theMin + ":" + theSec   }
 // -----------------------------------------------------------------------------------
 
     let daysName = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
