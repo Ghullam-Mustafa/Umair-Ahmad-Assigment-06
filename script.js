@@ -156,13 +156,14 @@ function calculateTotalPriceBtn(){
             position: "left", // `left`, `center` or `right`
             stopOnFocus: true, // Prevents dismissing of toast on hover
             style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
+              background: "linear-gradient(to right, #ff0000, #000)",
             },
             onClick: function(){} // Callback after click
           }).showToast();
+          return
     }
     var total = calculateTotal(price);
-    let html = "Total" + total;
+    let html = "Total" + Math.round(total);
     showOutput(html)
 }
 // ---------------------Tell Time -----------------------------------------------
