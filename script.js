@@ -114,6 +114,57 @@ function tellTime2() {
 function tellTime3() {
     tellTime()
 }
+// ------------------------calculateTax()-----------------------------------
+    function calculateTaxBtn() {
+        let  price =  +prompt("Enter Price");
+        let  taxRate = 17 ;
+        let tax = calculateTax(price,taxRate)
+        let html = "Tax:" + tax;
+        showOutput(html) 
+    }
+    function calculateTax(price,taxRate) {
+        var tax = price * taxRate / 100 ;
+        return tax
+    }
+
+// =======================================calculateTotalPrice================
+function calculateTotal(price) {
+    if (price < 1000) {
+        var taxRate = 8 ;
+    }else  {
+        var taxRate = 16 ; 
+    }
+
+    var tax  = calculateTax(price,taxRate)
+
+    var total = price + tax;
+
+    return total;
+}
+// =================================calculateTotalPriceBtn=====================
+function calculateTotalPriceBtn(){
+    var price = +prompt("Enter Price")
+
+    if(!price){
+        Toastify({
+            text: "Please enter price ",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "left", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }
+    var total = calculateTotal(price);
+    let html = "Total" + total;
+    showOutput(html)
+}
 // ---------------------Tell Time -----------------------------------------------
     function tellTime() {
         let now = new Date();
