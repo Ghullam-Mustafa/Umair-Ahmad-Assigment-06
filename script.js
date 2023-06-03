@@ -243,20 +243,20 @@ document.getElementById('Clean').onclick = function () {
 // console.log(gggg);
 
 // // ---------------------
-function getTimeOfDay() {
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
+// function getTimeOfDay() {
+//     var currentTime = new Date();
+//     var hours = currentTime.getHours();
   
-    if (hours >= 1 && hours <= 11) {
-      return "Good morning";
-    } else if (hours >= 11 && hours <= 18) {
-      return "Good afternoon";
-    } else {
-      return "Good night";
-    }
-  }
+//     if (hours >= 1 && hours <= 11) {
+//       return "Good morning";
+//     } else if (hours >= 11 && hours <= 18) {
+//       return "Good afternoon";
+//     } else {
+//       return "Good night";
+//     }
+//   }
   
-  // Usage
-  var greeting = getTimeOfDay();
-  console.log(greeting);
+//   // Usage
+//   var greeting = getTimeOfDay();
+//   console.log(greeting);
   
